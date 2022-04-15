@@ -12,7 +12,6 @@ nColors=3;
 %% Label Pixel in the Image
 % converting cluster classes into original image size
 pixel_labels=reshape(index,r,c);
-imshow(pixel_labels,[])
 e=cell(1,nColors);
 % replicate class output into 3 channels (rgb)
 rgb= repmat(pixel_labels,[1 1 3]);
@@ -51,6 +50,6 @@ maskmorphcl=imclose(maskmorphop,strel('disk',50));
 E1=imerode(maskmorphcl,strel('disk',24));
 maskrc1= imreconstruct(E1,maskmorphcl);
 face=maskrc1;
-figure;imshow(face);
+% figure;imshow(face);
 
 end
