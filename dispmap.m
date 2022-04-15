@@ -17,7 +17,7 @@ switch subject
         dmap(imcomplement(mask > 0)) = 0;
         dmap = medfilt2(dmap, [100 100], 'symmetric');
     case 'S4' % Subject 4
-        disparityRange = [346 426];
+        disparityRange = [256 512];
         dmap = disparity(left,right,'DisparityRange',disparityRange, ...
             'UniquenessThreshold',5,'DistanceThreshold',10);
         dmap(imcomplement(mask > 0)) = 0;
