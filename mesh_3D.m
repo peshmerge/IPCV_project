@@ -1,4 +1,4 @@
-function [TR]= create_3D_mesh(disparityMap, pc, unreliable, J1)
+function [TR]= mesh_3D(disparityMap, pc, unreliable, J1)
 %% create a connectivity structure
 [M, N] = size(disparityMap);         % get image size
 res = 2;                             % resolution of mesh
